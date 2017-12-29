@@ -7,7 +7,6 @@ stages {
          } 
  
    steps {
-   sh 'apt-get update && apt-get install maven'
    sh 'mvn clean package'
    sh 'echo "build ran"'
    archiveArtifacts artifacts: 'gameoflife-web/target/gameoflife.war', fingerprint:true
