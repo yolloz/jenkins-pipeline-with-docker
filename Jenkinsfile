@@ -26,7 +26,7 @@ stages {
 }
  stage ('Deploy to Integration') {
    agent {node{
-   label "abc"}
+   label "jenkins"}
          }
    steps {
    build job:'../Tomcat deploy to Integration' , parameters:[string(name: 'BRANCH_NAME', value: "${env.BRANCH_NAME}")]
