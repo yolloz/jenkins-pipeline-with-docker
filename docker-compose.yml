@@ -1,0 +1,25 @@
+version: '2'
+services:
+  jenkins:
+    image: "jenkins"
+    ports:
+     - "8080:8080"
+    networks:
+      - demo
+  sonarqube:
+    image: "sonarqube"
+    ports:
+     - "9000:9000"
+    networks:
+      - demo
+  tomcat:
+    image: 'bitnami/tomcat:7'
+    ports:
+      - 8080
+    environment:
+      - TOMCAT_USERNAME=admin
+      - TOMCAT_PASSWORD=admin
+    networks:
+      - demo
+networks: 
+  demo:
