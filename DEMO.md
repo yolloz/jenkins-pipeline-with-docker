@@ -72,12 +72,11 @@ docker exec --user root jenkins-demo-jenkins-1 apt-get -y install maven
 ![Parameterized build](images/pipelineParameter.PNG "Parameterized build")
 
 5. Configure the build step of the project to copy the artifact from the upstream project. Enter the name of the artifact to be copied as “gameoflife-web/target/gameoflife.war“
-
+![Tomcat deployment](images/tomcatDeploy2.PNG "Tomcat deployment")
 
 
 6. Add the post-build step tp deploy to the Tomcat container and save the changes. Add the admin credentials for Tomcat and select it from the dropdown. Enter the context path and the Tomcat URL as “http://tomcat:8080” 
-
-
+![Tomcat deployment](images/tomcatDeploy3.PNG "Tomcat deployment")
 
 7. After these jobs are created, you should see a build running on the master branch. If the build is not started automatically, you can manually click “Scan multipbranch pipeline Now”. We have configured the jenkins job to scan the  repository every 2 minutes in the tutorial. We can also setup webhooks in Github instead of polling the Git repository. 
 
