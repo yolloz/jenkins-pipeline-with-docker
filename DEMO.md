@@ -8,8 +8,9 @@ Docker for Mac, Windows, or Linux
 
 ## Setup Docker Containers
 To begin with the tutorial, clone the repository from Github “https://github.com/yolloz/jenkins-pipeline-with-docker.git” .
-
+```
 git clone https://github.com/yolloz/jenkins-pipeline-with-docker.git
+```
 Navigate to the directory “jenkins-pipeline-with-docker” and run the below docker command to setup Jenkins, Sonarqube and Tomcat containers.
 
 ```docker compose up -d```
